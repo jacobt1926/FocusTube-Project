@@ -41,8 +41,8 @@ export async function GET(request) {
 
     const data = await response.json();
     return Response.json(data);
-  } catch (error) {
-    console.error("Search route error:", error);
-    return Response.json({ error: "Unable to search YouTube." }, { status: 500 });
-  }
+    } catch (error) {
+        console.error("Search route error:", error);
+        return Response.json({ error: "Unable to search YouTube." }, { status: 500 });
+    }
 }
